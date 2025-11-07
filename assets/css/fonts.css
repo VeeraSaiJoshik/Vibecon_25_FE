@@ -1,6 +1,16 @@
 @font-face {
   font-family: 'Canela';
-  src: url('/public/fonts/Canela-Bold.ttf') format('opentype');
+  src: url('/fonts/Canela-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }

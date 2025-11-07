@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     public: {
       BACKEND_URL: process.env.BACKEND_URL || ''
     }
+    ,googleFontsApiKey: process.env.GOOGLE_FONTS_API_KEY || ''
   },
   devtools: { enabled: true },
   pages: true,
@@ -13,14 +14,24 @@ export default defineNuxtConfig({
     '@/assets/css/fonts.css'
   ],
   plugins: ['~/plugins/fontawesome_plugin.ts'],
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", '@nuxtjs/google-fonts'],
+  googleFonts: {
+    families: {
+      Roboto: true, // all default weights
+      'Open Sans': [400, 700],
+      Lato: { wght: [100, 400, 700], ital: [400] }
+    },
+    display: 'swap',
+    preconnect: true,
+    prefetch: true,
+    preload: true,
+    download: true,
+    inject: true
+  },
+        
   app: {
     head: {
       link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;900&display=swap'
-        },
         {
           rel: 'preload',
           href: '/fonts/Canela-Bold.ttf',
