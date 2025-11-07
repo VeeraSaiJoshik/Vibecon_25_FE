@@ -31,6 +31,12 @@ export default defineNuxtConfig({
         
   app: {
     head: {
+      script: [
+        {
+          src: 'https://kit.fontawesome.com/14ace737c0.js',
+          crossorigin: 'anonymous'
+        }
+      ],
       link: [
         {
           rel: 'preload',

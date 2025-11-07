@@ -13,7 +13,7 @@
             class="text-2xl"
             style="font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-weight: 700;"
           >
-            Hello Vibecon
+            <i class="fa-solid fa-hand-holding-droplet"></i> Hello Vibecon
           </p>
         </div>
         <GoogleFontPicker defaultFamily="Lato" />
